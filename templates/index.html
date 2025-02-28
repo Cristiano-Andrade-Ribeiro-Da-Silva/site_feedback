@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style/global.css')}}">
+    <link rel="stylesheet" href="../static/style/global.css">
+    <title>Feedback</title>
+</head>
+<body>
+    <main>
+
+        <header>
+
+            <h1>Comentarios</h1>
+
+        </header>
+
+        <section class="container">
+
+            <div class="container_comentario">
+
+                <form class="comentarios" action="/post/mensagem" method="POST">
+                    
+                    <label>Usuário</label>
+                    <br>
+                    <input type="text" name="usuario">
+                    <br>
+                    <br>  
+                    <label>Comentário</label>
+                    <br>
+                    <input type="text" name="mensagem">
+    
+                    
+                    <button>Enviar</button>
+    
+                    <img src="../static/img/chat.gif" alt="gif" class="gif">
+    
+                </form>
+    
+            </div>
+    
+    
+            <div class="container_chat">
+    
+    
+    
+            </div>
+
+        </section>
+        
+    </main>
+</body>
+</html>
