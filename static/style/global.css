@@ -50,17 +50,12 @@ header
     height: 500px;
 
     margin: 20px;
-
     padding: 10px;
-    
-    
-
-    background-color:white;
-
 
     border: 4px solid black;
-
     border-radius: 10px;
+
+    background-color:white;
 }
 
 .comentarios
@@ -75,6 +70,22 @@ header
 {
     width: 100px;
     height: 50px;
+
+    margin: 20px 40px 20px 40px;
+
+    transition: background-color 1s,border 1s, border-radius 0.5s;
+}
+
+.container_comentario button:hover
+{
+    width: 100px;
+    height: 50px;
+
+    color: white;
+    background-color:blueviolet;
+
+    border: 2px solid black;
+    border-radius: 10px;
 
     margin: 20px 40px 20px 40px;
 }
@@ -106,4 +117,15 @@ header
     border: 4px solid black;
 
     border-radius: 10px;
+}
+
+.aviso
+{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:italic;
+
+    color: white;
+
+    margin: 1px 0 10px 0;
 }

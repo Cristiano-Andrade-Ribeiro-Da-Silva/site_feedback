@@ -13,7 +13,7 @@
 
         <header>
 
-            <h1>Comentarios</h1>
+            <h1>Super Chat</h1>
 
         </header>
 
@@ -35,7 +35,7 @@
                     
                     <button>Enviar</button>
     
-                    <img src="../static/img/chat.gif" alt="gif" class="gif">
+                    <img src="../static/img/{{gif_html}}" alt="gif" class="gif">
     
                 </form>
     
@@ -43,12 +43,19 @@
     
     
             <div class="container_chat">
-    
-    
+
+                
+                {% for mensagem in mensagem_html %}
+
+                  <p>{{mensagem.usuario}}{{mensagem.data_comentario}}</p>
+                  <p>{{mensagem.comentario}}</p>
+
+                {% endfor %}
     
             </div>
 
         </section>
+        <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 80 caracteres, este comentário não será enviado</marquee></span>
         
     </main>
 </body>
