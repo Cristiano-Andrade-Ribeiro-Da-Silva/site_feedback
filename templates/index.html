@@ -47,15 +47,20 @@
                 
                 {% for mensagem in mensagem_html %}
 
-                  <p>{{mensagem.usuario}}{{mensagem.data_comentario}}</p>
-                  <p>{{mensagem.comentario}}</p>
+                <div class="container_mensagem">
 
+                    <p>{{mensagem.usuario}}|{{mensagem.data_comentario}}|</p>
+                    
+                    <p>{{mensagem.comentario}}</p>
+
+                </div>
+                  
                 {% endfor %}
     
             </div>
 
         </section>
-        <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 80 caracteres, este comentário não será enviado</marquee></span>
+        <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 100 caracteres, este comentário não será enviado</marquee></span>
         
     </main>
 </body>

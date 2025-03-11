@@ -15,23 +15,34 @@ class Mensagem:
         # O  cursor é responsavel por manipular o banco de dados
         cursor = conexao.cursor()
 
-        #Criando SQL para ser executado
-        # As tres aspas adcionais são para poder dar quebra de linha
-        sql = """INSERT INTO tb_comentarios(usuario, comentario, data_comentario)
-                        VALUES(%s, %s, %s)"""
+        tamanho_mensagem = len(mensagem)
 
-        valores = (usuario, mensagem, data_hora)
 
-        #Executa o comendo mysql
-        cursor.execute(sql, valores)
+        if tamanho_mensagem > 100:
+            
+            #Fecha a conexão com o banco de dados
+            cursor.close()
+            conexao.close()
 
-        #Confirma a alteração
-        conexao.commit()
+        if tamanho_mensagem <= 100:
 
-        #Fecha a conexão com o banco de dados
-        cursor.close()
-        conexao.close()
-    
+            #Criando SQL para ser executado
+            # As tres aspas adcionais são para poder dar quebra de linha
+            sql = """INSERT INTO tb_comentarios(usuario, comentario, data_comentario)
+                            VALUES(%s, %s, %s)"""
+
+            valores = (usuario, mensagem, data_hora)
+
+            #Executa o comendo mysql
+            cursor.execute(sql, valores)
+
+            #Confirma a alteração
+            conexao.commit()
+
+            #Fecha a conexão com o banco de dados
+            cursor.close()
+            conexao.close()
+            
 
     def recuperar_mensagens():
 
