@@ -64,7 +64,7 @@
 
                         <p>{{mensagem.comentario}}</p>
 
-                        <button type="button">👍</button><button type="button">👎</button>
+                        <button type="button">{{mensagem.curtidas}}👍</button><button type="button">👎</button>
 
                     </form>
 
@@ -73,7 +73,6 @@
                 {% endfor %}
     
             </div>
-            
         </section>
 
         <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 100 caracteres, este comentário não será enviado</marquee></span>

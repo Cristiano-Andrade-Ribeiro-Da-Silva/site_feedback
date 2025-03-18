@@ -42,7 +42,7 @@ class Mensagem:
             #Fecha a conexão com o banco de dados
             cursor.close()
             conexao.close()
-            
+
 
     def recuperar_mensagens():
 
@@ -57,7 +57,8 @@ class Mensagem:
         sql = """SELECT cod_comentario,
                         nome,
                         comentario,
-                        data_hora
+                        data_hora,
+                        curtidas
                         FROM tb_comentarios"""
 
         #Executa o comendo mysql
@@ -94,4 +95,3 @@ class Mensagem:
         #Fecha a conexão com o banco de dados
         cursor.close()
         conexao.close()
-
