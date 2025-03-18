@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 lista = []
 
-lista_gif = ['chat.gif','aleatorio-01.gif','aleatorio-02.gif','aventura-01.gif','aventura-02.gif','berserk-01.gif','berserk-02.gif','dragon-01.gif','dragon-02.gif']
+lista_gif = ['macaco.gif','chat.gif','aleatorio-01.gif','aleatorio-02.gif','aventura-01.gif','aventura-02.gif','berserk-01.gif','berserk-02.gif','dragon-01.gif','dragon-02.gif']
 
 
 #Todas as rotas estarão aqui
@@ -41,5 +41,12 @@ def post_mensagem():
     return redirect("/")
 
 
+# o "<codigo>" esta em constante mudança
+@app.route("/del/mensagem/<codigo>")
+def del_mensagem(codigo):
+
+    Mensagem.deletar_mensagem(codigo)
+
+    return redirect("/")
 
 app.run(debug = True)

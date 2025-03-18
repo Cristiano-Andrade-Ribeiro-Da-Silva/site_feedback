@@ -35,7 +35,7 @@
                     
                     <button>Enviar</button>
     
-                    <img src="../static/img/{{gif_html}}" alt="gif" class="gif">
+                    <img src="../static/img/{{gif_html}}" alt="gif" class="gif_aleatorio">
     
                 </form>
     
@@ -51,15 +51,20 @@
 
                     <form class="usuario_data_chat">
 
-                        <p>{{mensagem.usuario}}</p>
+                        <p>{{mensagem.nome}}</p>
                         
-                        <p>{{mensagem.data_comentario}}</p>
+                        <p>{{mensagem.data_hora}}</p>
+
+                        <button><a href="/del/mensagem/{{mensagem.cod_comentario}}">Excluir</a></button>
+                        
 
                     </form>
 
                     <form class="mensagem_chat">
 
                         <p>{{mensagem.comentario}}</p>
+
+                        <button type="button">👍</button><button type="button">👎</button>
 
                     </form>
 
@@ -68,10 +73,11 @@
                 {% endfor %}
     
             </div>
-
+            
         </section>
+
         <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 100 caracteres, este comentário não será enviado</marquee></span>
-        
+
     </main>
 </body>
 </html>

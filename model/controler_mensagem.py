@@ -5,7 +5,7 @@ import datetime
 
 class Mensagem:
 
-    def cadastrar_mensagem(usuario, mensagem):
+    def cadastrar_mensagem(nome, mensagem):
 
         data_hora = datetime.datetime.today()
 
@@ -28,10 +28,10 @@ class Mensagem:
 
             #Criando SQL para ser executado
             # As tres aspas adcionais são para poder dar quebra de linha
-            sql = """INSERT INTO tb_comentarios(usuario, comentario, data_comentario)
-                            VALUES(%s, %s, %s)"""
+            sql = """INSERT INTO tb_comentarios(nome, comentario, data_hora)
+                            VALUES(%s, %s, %s);"""
 
-            valores = (usuario, mensagem, data_hora)
+            valores = (nome, mensagem, data_hora)
 
             #Executa o comendo mysql
             cursor.execute(sql, valores)
@@ -49,14 +49,15 @@ class Mensagem:
         #A primeira 'conexao' é uma variavel e a segunda 'Conexao' é uma classe
         conexao = Conexao.criar_conexao()
 
-        # O  cursor é responsavel por manipular o banco de dados, o 'dictionary = True' serve para
+        # O  cursor é responsavel por manipular o banco de dados, o 'dictionary = True' serve para criar um dicionário
         cursor = conexao.cursor(dictionary = True)
 
         #Criando SQL para ser executado
         # As tres aspas adcionais são para poder dar quebra de linha
-        sql = """SELECT usuario,
+        sql = """SELECT cod_comentario,
+                        nome,
                         comentario,
-                        data_comentario
+                        data_hora
                         FROM tb_comentarios"""
 
         #Executa o comendo mysql
@@ -72,3 +73,25 @@ class Mensagem:
         conexao.close()
 
         return dados
+
+
+    def deletar_mensagem(codigo):
+
+        conexao = Conexao.criar_conexao()
+
+        cursor = conexao.cursor()
+
+        sql = """DELETE FROM tb_comentarios WHERE cod_comentario = %s;"""
+
+        # Virgula colocada no final para reconhecer como tupla
+        valores = (codigo,)
+
+        cursor.execute(sql,valores)
+
+        #Confirma a alteração
+        conexao.commit()
+
+        #Fecha a conexão com o banco de dados
+        cursor.close()
+        conexao.close()
+
