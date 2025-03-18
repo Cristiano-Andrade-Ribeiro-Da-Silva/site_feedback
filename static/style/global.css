@@ -107,6 +107,9 @@ header
     width: 70%;
     height: 500px;
 
+    overflow-y: scroll;
+    overflow-x: hidden;
+
     margin: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -125,6 +128,24 @@ header
     margin:10px;
 
     border: 1px solid black;
+}
+
+.usuario_data_chat
+{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    
+}
+
+.mensagem_chat
+{
+    width: 100%;
+    height: 50%;
 }
 
 .aviso
