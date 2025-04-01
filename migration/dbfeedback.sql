@@ -1,12 +1,23 @@
 CREATE DATABASE IF NOT EXISTS db_feedback;
 USE db_feedback;
 
+
 CREATE TABLE IF NOT EXISTS tb_comentarios
 (
 cod_comentario INT AUTO_INCREMENT PRIMARY KEY,
-usuario CHAR(50) NOT NULL,
+nome CHAR(50) NOT NULL,
 comentario TEXT NOT NULL,
-data_comentario DATETIME NOT NULL
+data_hora DATETIME NOT NULL,
+curtidas INT default 0
 );
 
-SELECT usuario, comentario, data_comentario FROM tb_comentarios;
+
+CREATE TABLE IF NOT EXISTS tb_usuarios
+(
+login CHAR(50) NOT NULL,
+nome CHAR(50) NOT NULL,
+senha CHAR(50) NOT NULL
+);
+
+SELECT cod_comentario, nome, comentario, data_hora, curtidas FROM tb_comentarios;
+SELECT login, nome, senha FROM tb_usuarios;

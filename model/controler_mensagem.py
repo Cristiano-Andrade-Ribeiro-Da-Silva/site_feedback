@@ -33,7 +33,7 @@ class Mensagem:
 
             valores = (nome, mensagem, data_hora)
 
-            #Executa o comendo mysql
+            #Executa o comando mysql
             cursor.execute(sql, valores)
 
             #Confirma a alteração
@@ -88,6 +88,48 @@ class Mensagem:
         valores = (codigo,)
 
         cursor.execute(sql,valores)
+
+        #Confirma a alteração
+        conexao.commit()
+
+        #Fecha a conexão com o banco de dados
+        cursor.close()
+        conexao.close()
+    
+    
+    def curtir_mensagem(codigo):
+
+        conexao = Conexao.criar_conexao()
+
+        cursor = conexao.cursor()
+
+        sql  = """UPDATE tb_comentarios SET curtidas = curtidas +1 WHERE cod_comentario = %s;"""
+
+        valores = (codigo,)
+
+        #Executa o comando mysql
+        cursor.execute(sql, valores)
+
+        #Confirma a alteração
+        conexao.commit()
+
+        #Fecha a conexão com o banco de dados
+        cursor.close()
+        conexao.close()
+    
+
+    def descurtir_mensagem(codigo):
+
+        conexao = Conexao.criar_conexao()
+
+        cursor = conexao.cursor()
+
+        sql  = """UPDATE tb_comentarios SET curtidas = curtidas -1 WHERE cod_comentario = %s;"""
+
+        valores = (codigo,)
+
+        #Executa o comando mysql
+        cursor.execute(sql, valores)
 
         #Confirma a alteração
         conexao.commit()

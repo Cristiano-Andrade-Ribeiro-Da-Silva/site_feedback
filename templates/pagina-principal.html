@@ -47,36 +47,44 @@
                 
                 {% for mensagem in mensagem_html %}
 
-                <div class="container_mensagem">
+                    <div class="container_mensagem">
 
-                    <form class="usuario_data_chat">
+                        <form class="usuario_data_chat">
 
-                        <p>{{mensagem.nome}}</p>
-                        
-                        <p>{{mensagem.data_hora}}</p>
+                            <p>{{mensagem.nome}}</p>
 
-                        <button><a href="/del/mensagem/{{mensagem.cod_comentario}}">Excluir</a></button>
-                        
+                            <p>{{mensagem.data_hora}}</p>
 
-                    </form>
+                            <p>{{mensagem.curtidas}}</p>
 
-                    <form class="mensagem_chat">
+                            <a href="/put/adicionar/curtidas/mensagem/{{mensagem.cod_comentario}}">👍</a>
 
-                        <p>{{mensagem.comentario}}</p>
+                            <a href="/remover/curtidas/mensagem/{{mensagem.cod_comentario}}">👎</a>
 
-                        <button type="button">{{mensagem.curtidas}}👍</button><button type="button">👎</button>
+                            <a href="/del/mensagem/{{mensagem.cod_comentario}}">Excluir</a>
 
-                    </form>
 
-                </div>
-                  
+                        </form>
+
+                        <form class="mensagem_chat">
+
+                            <p>{{mensagem.comentario}}</p>
+
+
+
+                        </form>
+
+                    </div>
+
                 {% endfor %}
-    
+
             </div>
+            
         </section>
 
         <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 100 caracteres, este comentário não será enviado</marquee></span>
 
     </main>
+
 </body>
 </html>
