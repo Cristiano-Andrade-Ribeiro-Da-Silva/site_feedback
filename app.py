@@ -122,7 +122,7 @@ def remover_curtida(codigo):
     return redirect("/comentario")
 
 #Apenas quando o site estiver ligado a internet 
-app.run(host = "0.0.0.0", port = 8080)
+#app.run(host = "0.0.0.0", port = 8080)
 
-# Apenas quando for para testes
-#app.run(debug = True)
+# Apenas quando for para testes em local
+app.run(debug = True)

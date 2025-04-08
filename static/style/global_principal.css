@@ -118,7 +118,7 @@ a{
     width: 150px;
     height: 150px;
 
-    margin-left: 10px;
+    margin: 10px;
 
     border: 1px solid black;
 
@@ -165,8 +165,11 @@ a{
 
 .mensagem_chat
 {
-    width: 100%;
+    width: 50%;
     height: 50%;
+
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .aviso
