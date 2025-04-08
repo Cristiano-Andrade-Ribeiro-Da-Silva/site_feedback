@@ -14,9 +14,9 @@ curtidas INT default 0
 
 CREATE TABLE IF NOT EXISTS tb_usuarios
 (
-login CHAR(50) NOT NULL,
-nome CHAR(50) NOT NULL,
-senha CHAR(50) NOT NULL
+login VARCHAR(50) NOT NULL,
+nome VARCHAR(50) NOT NULL,
+senha VARCHAR(150) NOT NULL
 );
 
 SELECT cod_comentario, nome, comentario, data_hora, curtidas FROM tb_comentarios;
