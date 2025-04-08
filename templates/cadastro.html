@@ -3,29 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastra e Login</title>
+    <link rel="stylesheet" href="../static/style/global_cadastro_login.css">
+    <title>Cadastro</title>
+
 </head>
 <body>
-    
-    <section>
 
-        <div>
+    <section class="container">
 
-            <form action="/post/usuario" method="POST">
+        <h2>Cadastro</h2>
+        
+        <form action="/post/cadastro" method="POST">
 
+            <div class="form_div">
+
+                <label>Login:</label>
                 <input type="text" name="login" placeholder="Login">
+
+            </div>
+
+            <div class="form_div">
+
+                <label>Nome:</label>
                 <input type="text" name="nome" placeholder="Nome">
-                <input type="text" name="senha" placeholder="Senha">
 
-                <button>Cadastrar</button>
+            </div>
 
-                <a href="./login.html">Já tem uma conta ? Acesse aqui.</a>
+            <div class="form_div">
 
-            </form>
+                <label>Senha:</label>
+                <input type="password" name="senha" placeholder="Senha">
+                
+            </div>
+
+            <button type="submit">Cadastrar</button>
+
+        </form>
+
+        <div class="login_link">
+
+            <p>Já tem uma conta? <a href="/login/usuario">Acesse aqui.</a></p>
 
         </div>
-
+            
     </section>
+
 
 </body>
 </html>

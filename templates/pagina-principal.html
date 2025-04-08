@@ -5,34 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static',filename='style/global.css')}}">
-    <link rel="stylesheet" href="../static/style/global.css">
+    <link rel="stylesheet" href="../static/style/global_principal.css">
     <title>Feedback</title>
 </head>
 <body>
+
     <main>
 
         <header>
 
             <h1>Super Chat</h1>
-
+    
+            <h3>Seja bem-vindo {{session["nome_usuario"]}}</h3>
+    
         </header>
-
+    
         <section class="container">
-
+    
             <div class="container_comentario">
-
+    
                 <form class="comentarios" action="/post/mensagem" method="POST">
                     
-                    <label>Usuário</label>
-                    <br>
-                    <input type="text" name="usuario">
-                    <br>
-                    <br>  
                     <label>Comentário</label>
                     <br>
-                    <input type="text" name="mensagem">
+                    <textarea name="mensagem" class="input_mensagem"></textarea>
     
-                    
                     <button>Enviar</button>
     
                     <img src="../static/img/{{gif_html}}" alt="gif" class="gif_aleatorio">
@@ -43,45 +40,45 @@
     
     
             <div class="container_chat">
-
+    
                 
                 {% for mensagem in mensagem_html %}
-
+    
                     <div class="container_mensagem">
-
+    
                         <form class="usuario_data_chat">
-
+    
                             <p>{{mensagem.nome}}</p>
-
+    
                             <p>{{mensagem.data_hora}}</p>
-
+    
                             <p>{{mensagem.curtidas}}</p>
-
+    
                             <a href="/put/adicionar/curtidas/mensagem/{{mensagem.cod_comentario}}">👍</a>
-
+    
                             <a href="/remover/curtidas/mensagem/{{mensagem.cod_comentario}}">👎</a>
-
+    
                             <a href="/del/mensagem/{{mensagem.cod_comentario}}">Excluir</a>
-
-
+    
+    
                         </form>
-
+    
                         <form class="mensagem_chat">
-
+    
                             <p>{{mensagem.comentario}}</p>
-
-
-
+    
+    
+    
                         </form>
-
+    
                     </div>
-
+    
                 {% endfor %}
-
+    
             </div>
             
         </section>
-
+    
         <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 100 caracteres, este comentário não será enviado</marquee></span>
 
     </main>
