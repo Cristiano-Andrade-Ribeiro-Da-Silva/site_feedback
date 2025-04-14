@@ -39,14 +39,14 @@
                 </form>
                 
                 
-                <div class="container_chat_media">
+                <div class="container_chat_cell">
     
                 
                 {% for mensagem in mensagem_html %}
     
-                    <div class="container_mensagem_media">
+                    <div class="container_mensagem_cell">
     
-                        <form class="usuario_data_chat_media">
+                        <form class="usuario_data_chat_cell">
     
                             <p>{{mensagem.nome}}</p>
     
@@ -57,13 +57,13 @@
     
                         </form>
     
-                        <form class="mensagem_chat_media">
+                        <form class="mensagem_chat_cell">
     
                             <p>{{mensagem.comentario}}</p>
     
                         </form>
                         
-                        <form class="mensagem_curtida_media">
+                        <form class="mensagem_curtida_cell">
                             
                             <a href="/put/adicionar/curtidas/mensagem/{{mensagem.cod_comentario}}">👍</a>
                             <p>{{mensagem.curtidas}}</p>
@@ -94,9 +94,10 @@
     
                             <p>{{mensagem.data_hora}}</p>
     
-                            <p>{{mensagem.curtidas}}</p>
     
                             <a href="/put/adicionar/curtidas/mensagem/{{mensagem.cod_comentario}}">👍</a>
+
+                            <p>{{mensagem.curtidas}}</p>
     
                             <a href="/remover/curtidas/mensagem/{{mensagem.cod_comentario}}">👎</a>
     

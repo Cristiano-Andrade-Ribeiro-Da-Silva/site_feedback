@@ -18,13 +18,13 @@ class Mensagem:
         tamanho_mensagem = len(mensagem)
 
 
-        if tamanho_mensagem > 150:
+        if tamanho_mensagem > 1000:
             
             #Fecha a conexão com o banco de dados
             cursor.close()
             conexao.close()
 
-        if tamanho_mensagem <= 150:
+        if tamanho_mensagem <= 1000:
 
             #Criando SQL para ser executado
             # As tres aspas adcionais são para poder dar quebra de linha
