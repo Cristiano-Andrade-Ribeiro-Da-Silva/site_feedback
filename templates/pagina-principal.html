@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static',filename='style/global.css')}}">
     <link rel="stylesheet" href="../static/style/global_principal.css">
+    <link rel="stylesheet" href="../static/style/cores.css">
+    <link rel="stylesheet" href="../static/style/media.css">
     <title>Feedback</title>
 </head>
 <body>
@@ -35,6 +37,46 @@
                     <img src="../static/img/{{gif_html}}" alt="gif" class="gif_aleatorio">
     
                 </form>
+                
+                
+                <div class="container_chat_media">
+    
+                
+                {% for mensagem in mensagem_html %}
+    
+                    <div class="container_mensagem_media">
+    
+                        <form class="usuario_data_chat_media">
+    
+                            <p>{{mensagem.nome}}</p>
+    
+                            <p>{{mensagem.data_hora}}</p>
+   
+    
+                            <a href="/del/mensagem/{{mensagem.cod_comentario}}">Excluir</a>
+    
+                        </form>
+    
+                        <form class="mensagem_chat_media">
+    
+                            <p>{{mensagem.comentario}}</p>
+    
+                        </form>
+                        
+                        <form class="mensagem_curtida_media">
+                            
+                            <a href="/put/adicionar/curtidas/mensagem/{{mensagem.cod_comentario}}">👍</a>
+                            <p>{{mensagem.curtidas}}</p>
+                            <a href="/remover/curtidas/mensagem/{{mensagem.cod_comentario}}">👎</a> 
+    
+                            
+                        </form>
+    
+                    </div>
+    
+                {% endfor %}
+    
+            </div>
     
             </div>
     
@@ -67,8 +109,6 @@
     
                             <p>{{mensagem.comentario}}</p>
     
-    
-    
                         </form>
     
                     </div>
@@ -79,7 +119,7 @@
             
         </section>
     
-        <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 100 caracteres, este comentário não será enviado</marquee></span>
+        <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 1000 caracteres, este comentário não será enviado</marquee></span>
 
     </main>
 

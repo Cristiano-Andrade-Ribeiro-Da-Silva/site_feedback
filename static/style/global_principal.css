@@ -3,11 +3,18 @@
     margin: 0 auto;
     box-sizing: border-box;
     font-family: 'Roboto' sans-serif;
+    
+    color: var(--dourado);
+}
+
+p,a
+{
+    color: var(--preto);
 }
 
 body
 {
-    background-color: black;
+    background: var(--preto);
 }
 
 main
@@ -17,10 +24,12 @@ main
 
     margin: 40px auto;
 
-    background-color:darkviolet;
+    background: var(--azul_escuro);
 
-    border: 4px solid white;
+    border: 4px solid var(--dourado);
     border-radius: 10px;
+    
+    box-shadow: 0 0 50px var(--dourado);
 }
 
 header
@@ -47,7 +56,11 @@ a{
 
     display: flex;
     justify-content: space-between;
+    
+    background-size: cover;
+    
 }
+
 
 .container_comentario
 {
@@ -57,10 +70,11 @@ a{
     margin: 20px;
     padding: 10px;
 
-    border: 4px solid black;
+    border: 4px solid var(--marrom);
     border-radius: 10px;
 
-    background-color:white;
+    background: var(--branco);
+    
 }
 
 .comentarios
@@ -89,28 +103,24 @@ a{
 
 }
 
-.container_comentario button
+.comentarios button
 {
     width: 100px;
     height: 50px;
-
+    
     margin: 20px 40px 20px 40px;
-
-    transition: background-color 1s,border 1s, border-radius 0.5s;
-}
-
-.container_comentario button:hover
-{
-    width: 100px;
-    height: 50px;
-
-    color: white;
-    background-color:blueviolet;
-
+    
     border: 2px solid black;
     border-radius: 10px;
 
-    margin: 20px 40px 20px 40px;
+    transition: background 1s;
+}
+
+.comentarios button:hover
+{
+    transform: scale(0.9);
+    background: var(--cinza_claro);
+    box-shadow: 0 0 10px var(--dourado);
 }
 
 .gif_aleatorio
@@ -143,33 +153,50 @@ a{
     border-radius: 10px;
 }
 
+
+.container_chat_media
+{
+    display: none;
+}
+
 .container_mensagem
 {
     width: 100%;
-    height: 50px;
+    height: auto;
 
     margin:10px;
 
     border: 1px solid black;
+    border-radius: 10px;
 }
 
 .usuario_data_chat
 {
     width: 100%;
     height: 50%;
-
-    justify-content:space-around;
-
+    
     display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    
+    border-bottom: 1px solid black;
 }
 
 .mensagem_chat
 {
     width: 50%;
-    height: 50%;
+    height: auto;
+    
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.mensagem_chat p
+{
+    width: 840px;
 }
 
 .aviso

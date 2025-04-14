@@ -1,17 +1,26 @@
-body {
-    
-    min-height: 100vh;
+*
+{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
 
-    margin: 0 auto;
+h1, span, p
+{
+    color: var(--branco);
+}
+
+body
+{
+    min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-family: sans-serif;
-
-    background-color: #f4f4f4;
+    
+    background: var(--preto);
 }
+
 
 .container {
 
@@ -21,13 +30,20 @@ body {
     margin: 0 auto;
 
     text-align: center;
+    
+    border: 1px solid var(--dourado);
+    border-radius: 10px;
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    border-radius: 8px;
-
-    background-color: #ffffff;
+    box-shadow: 0 0 20px var(--dourado);
+    
+    background: var(--azul_escuro); 
 }
+
+.container h1
+{
+    margin-bottom:20px;
+}
+
 
 .form_div {
     margin-bottom: 20px;
@@ -41,7 +57,8 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"]
+{
     width: calc(100% - 22px);
     padding: 10px;
     border: 1px solid #ccc;
@@ -50,7 +67,8 @@ input[type="password"] {
     margin-bottom: 10px;
 }
 
-button {
+button
+{
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -61,21 +79,25 @@ button {
     width: 100%;
 }
 
-button:hover {
+button:hover 
+{
     background-color: #0056b3;
 }
 
-.login_link {
+.login_link
+{
     margin-top: 20px;
     font-size: 14px;
     color: #555;
 }
 
-.login_link a {
+.login_link a
+{
     color: #007bff;
     text-decoration: none;
 }
 
-.login_link a:hover {
+.login_link a:hover
+{
     text-decoration: underline;
 }

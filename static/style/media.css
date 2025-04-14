@@ -1,0 +1,141 @@
+@media (max-width: 760px)
+{
+    main
+{
+    width: 90vw;
+    height: 800px;
+}
+    
+    
+.container
+{
+    margin: 0 auto;
+}
+
+.container_comentario
+{
+    width: 90%;
+    height: 550px;
+}
+
+.comentarios
+{
+    width: 180px;
+    height: 180px;
+
+    margin: 10px auto;
+    
+    text-align: center;
+}
+    
+    .input_mensagem
+    {
+        max-height: 60%;
+    }
+
+.comentarios button
+{
+    width: 100px;
+    height: 50px;
+
+    margin: 10px 40px 10px 40px;
+
+    transition: background-color 1s,border 1s, border-radius 0.5s;
+}
+
+.gif_aleatorio
+{
+    display: none;
+}
+    
+    
+    .container_chat
+    {
+        display: none;
+    }
+    
+    .container_chat_media
+    {
+        width: 100%;
+        height: 280px;
+        
+        display: flex;
+        flex-direction: column;
+        
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
+        margin-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+        border-bottom: 2px solid black;
+        border-top: 2px solid black;
+        border-radius: 10px;
+    }
+    
+
+.container_mensagem_media
+{
+    width: 100%;
+    height: auto;
+
+    margin:10px;
+    
+    border: 1px solid black;
+    border-radius: 10px;
+}
+    
+    
+.usuario_data_chat_media
+{
+    width: 100%;
+    height: 33%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    
+    border-bottom: 1px solid black;
+}
+
+.mensagem_chat_media
+{
+    width: 50%;
+    height: auto;
+    
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.mensagem_chat_media p
+{
+    width: 840px;
+}
+    
+    
+    .mensagem_curtida_media
+    {
+        width: 100%;
+        height: 33%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        border-top: 1px solid black
+    }
+
+.aviso
+{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:italic;
+
+    color: white;
+}
+}
