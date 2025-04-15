@@ -73,6 +73,16 @@
                             <a href="/del/mensagem/{{mensagem.cod_comentario}}">Excluir</a>
     
                         </form>
+                        
+
+                        <form class="mensagem_curtida_cell">
+                            
+                            <a href="/put/adicionar/curtidas/mensagem/{{mensagem.cod_comentario}}">👍</a>
+                            <p>{{mensagem.curtidas}}</p>
+                            <a href="/remover/curtidas/mensagem/{{mensagem.cod_comentario}}">👎</a> 
+    
+                        </form>
+
     
                         <form class="mensagem_chat_cell">
     
@@ -80,14 +90,7 @@
     
                         </form>
                         
-                        <form class="mensagem_curtida_cell">
-                            
-                            <a href="/put/adicionar/curtidas/mensagem/{{mensagem.cod_comentario}}">👍</a>
-                            <p>{{mensagem.curtidas}}</p>
-                            <a href="/remover/curtidas/mensagem/{{mensagem.cod_comentario}}">👎</a> 
-    
-                            
-                        </form>
+
     
                     </div>
     

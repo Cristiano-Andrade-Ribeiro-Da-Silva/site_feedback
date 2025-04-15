@@ -75,6 +75,7 @@ class Mensagem:
 
         return dados
     
+    
     # def recuperar_ultima_mensagem(usuario):
 
     #     conexao = Conexao.criar_conexao()
