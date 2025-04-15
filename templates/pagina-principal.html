@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../static/style/global_principal.css">
     <link rel="stylesheet" href="../static/style/cores.css">
     <link rel="stylesheet" href="../static/style/media.css">
+    
     <title>Feedback</title>
 </head>
 <body>
@@ -21,6 +22,25 @@
             <h3>Seja bem-vindo {{session["nome_usuario"]}}</h3>
     
         </header>
+
+        <section class="logoff">
+
+            <div>
+
+                <figure>
+
+                    <a href="/get/logoff">
+
+                        <img src="../static/img/logoff.png" alt="logoff">
+
+                    </a>
+
+                </figure>
+
+            </div>
+
+        </section>
+
     
         <section class="container">
     
@@ -49,9 +69,6 @@
                         <form class="usuario_data_chat_cell">
     
                             <p>{{mensagem.nome}}</p>
-    
-                            <p>{{mensagem.data_hora}}</p>
-   
     
                             <a href="/del/mensagem/{{mensagem.cod_comentario}}">Excluir</a>
     
@@ -119,6 +136,7 @@
             </div>
             
         </section>
+
     
         <span class="aviso"><marquee>⚠️Aviso⚠️, se um comentario for ter mais de 1000 caracteres, este comentário não será enviado</marquee></span>
 

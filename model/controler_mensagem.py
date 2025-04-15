@@ -74,6 +74,14 @@ class Mensagem:
         conexao.close()
 
         return dados
+    
+    # def recuperar_ultima_mensagem(usuario):
+
+    #     conexao = Conexao.criar_conexao()
+
+    #     cursor = conexao.cursor()
+
+    #     sql = """"""
 
 
     def deletar_mensagem(codigo):

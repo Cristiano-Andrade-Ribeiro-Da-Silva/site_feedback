@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, jsonify
 import random
 #Importando a classe 'Conexao' do arquivo 'conexao.py' que está dentro da pasta 'DATA'
 from DATA.conexao import Conexao
@@ -65,6 +65,15 @@ def post_logar():
         return redirect("/login/usuario")
 
 
+# Rota para deslogar do site
+@app.route("/get/logoff")
+def pos_logoff():
+
+    Usuario.logoff()
+
+    return redirect("/")
+
+
 @app.route("/comentario")
 def pagina_principal():
 
@@ -94,6 +103,21 @@ def post_mensagem():
     Mensagem.cadastrar_mensagem(usuario, mensagem)
 
     return redirect("/comentario")
+
+
+@app.route("/api/get/mensagens")
+def api_get_mensagens():
+    mensagens = Mensagem.recuperar_mensagens()
+
+    return jsonify(mensagens)
+
+
+@app.route("/api/get/ultimamenasgem/<usuario>")
+def api_ultima_mensagem(usuario):
+
+    mensagem = Mensagem.ultima_mensagem(usuario)
+
+    return jsonify(mensagem)
 
 
 # o "<codigo>" esta em constante mudança
