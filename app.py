@@ -96,11 +96,11 @@ def pagina_principal():
 def post_mensagem():
     
     #Pega informações dos input no html 
-    usuario = session["nome_usuario"]
+    nome_usuario = session["nome_usuario"]
     mensagem = request.form.get("mensagem")
 
     #Cadastrando a mensagem usando a classe 'Mensagem' com o método 'Cadastrar_mensagem'
-    Mensagem.cadastrar_mensagem(usuario, mensagem)
+    Mensagem.cadastrar_mensagem(nome_usuario, mensagem)
 
     return redirect("/comentario")
 

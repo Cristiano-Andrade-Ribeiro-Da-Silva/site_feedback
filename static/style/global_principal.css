@@ -66,8 +66,8 @@ a{
 
 .container
 {
-    width: 96%;
-    height: 600px;
+    width: auto;
+    height: auto;
 
     margin: 20px 20px 0px 20px;
 
@@ -125,12 +125,12 @@ a{
     width: 100px;
     height: 50px;
     
-    margin: 20px 40px 20px 40px;
+    margin: auto;
     
     border: 2px solid black;
     border-radius: 10px;
 
-    transition: background 1s;
+    transition: background-color 1s,border 1s, border-radius 0.5s;
 }
 
 .comentarios button:hover
@@ -144,8 +144,12 @@ a{
 {
     width: 150px;
     height: 150px;
+    
+    display: flex;
 
     margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
 
     border: 1px solid black;
 
@@ -197,7 +201,7 @@ a{
     flex-direction: row;
     justify-content:space-around;
     
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--preto);
 }
 
 .mensagem_chat
@@ -223,7 +227,7 @@ a{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style:italic;
 
-    color: white;
+    color: var(--branco);
 
     margin: 1px 0 10px 0;
 }

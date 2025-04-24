@@ -60,6 +60,7 @@ class Usuario:
 
 
         if resultado:
+            
             session['usuario'] = resultado['login']
             session['nome_usuario'] = resultado['nome']
 

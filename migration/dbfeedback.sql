@@ -14,7 +14,7 @@ curtidas INT default 0
 
 CREATE TABLE IF NOT EXISTS tb_usuarios
 (
-login VARCHAR(50) NOT NULL,
+login VARCHAR(50) NOT NULL PRIMARY KEY,
 nome VARCHAR(50) NOT NULL,
 senha VARCHAR(150) NOT NULL
 );
