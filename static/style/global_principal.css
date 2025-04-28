@@ -113,7 +113,7 @@ a{
     resize: horizontal;
     resize: vertical;
 
-    border: 1px solid black;
+    border: 1px solid var(--preto);
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -127,7 +127,7 @@ a{
     
     margin: auto;
     
-    border: 2px solid black;
+    border: 2px solid var(--preto);
     border-radius: 10px;
 
     transition: background-color 1s,border 1s, border-radius 0.5s;
@@ -151,7 +151,7 @@ a{
     margin-left: auto;
     margin-right: auto;
 
-    border: 1px solid black;
+    border: 1px solid var(--preto);
 
     border-radius: 10px;
 }
@@ -168,7 +168,7 @@ a{
     padding-left: 20px;
     padding-right: 20px;
 
-    background-color:white;
+    background: var(--branco);
 
     border: 4px solid var(--marrom);
     border-radius: 10px 0 0 10px;
@@ -188,7 +188,7 @@ a{
 
     margin:10px;
 
-    border: 1px solid black;
+    border: 1px solid var(--preto);
     border-radius: 10px;
 }
 

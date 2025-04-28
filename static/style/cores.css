@@ -1,10 +1,15 @@
 :root
 {
-    --preto: #000000;
-    --cinza_claro: #D3D3D3;
     --branco: #FFFFFF;
-    --azul_escuro: #0A1828;
+    --cinza_claro: #D3D3D3;
+    --cinza_escuro: #333333;
+    --preto: #000000;
+    
     --turquesa: #178582;
+    --azul_ciano: #007bff;
+    --azul_ciano_escuro: #0056b3;
+    --azul_escuro: #0A1828;
+    
     --dourado: #BFA181;
     --marrom: #99775C;
 }
