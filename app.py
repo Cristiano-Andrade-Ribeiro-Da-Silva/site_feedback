@@ -13,7 +13,7 @@ from flask import session
 
 app = Flask(__name__)
 
-app.secret_key = "senha"
+app.secret_key = "senha_secreta"
 
 lista = []
 
@@ -71,6 +71,7 @@ def post_logar():
 @app.route("/get/logoff")
 def pos_logoff():
 
+    # Função de des-logar
     Usuario.logoff()
 
     return redirect("/")
