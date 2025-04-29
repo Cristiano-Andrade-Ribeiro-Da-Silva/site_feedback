@@ -17,7 +17,9 @@ app.secret_key = "senha"
 
 lista = []
 
-lista_gif = ['chat.gif','macaco.gif','aleatorio-01.gif','aleatorio-02.gif','aventura-01.gif','aventura-02.gif','berserk-01.gif','berserk-02.gif','dragon-01.gif','dragon-02.gif']
+lista_gif = ['chat.gif','macaco.gif', 'dance-01.gif', 'dance-02.gif', 'aventura-01.gif','aventura-02.gif','berserk-01.gif','berserk-02.gif','dragon-01.gif','dragon-02.gif']
+
+lista_gif_marquee = ['dance-03.gif', 'dance-04.gif', 'dance-05.gif', 'esqueleto.gif']
 
 
 #Todas as rotas estarão aqui
@@ -82,10 +84,12 @@ def pagina_principal():
 
         gif = random.choice(lista_gif)
 
+        gif_marquee = random.choice(lista_gif_marquee)
+
         #Mostrando as mensagens em um container usando a classe 'Mensagem com o método 'recuperar_mensagens' 
         mensagens = Mensagem.recuperar_mensagens()
 
-        return render_template("pagina-principal.html", mensagem_html = mensagens, gif_html = gif)
+        return render_template("pagina-principal.html", mensagem_html = mensagens, gif_html = gif, gif_marquee_html = gif_marquee)
 
     else:
 
