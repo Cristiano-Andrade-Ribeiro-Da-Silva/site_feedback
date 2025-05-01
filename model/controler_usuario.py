@@ -70,6 +70,6 @@ class Usuario:
             
             return False
     
-    def logoff():
+    def logout():
 
         session.clear()

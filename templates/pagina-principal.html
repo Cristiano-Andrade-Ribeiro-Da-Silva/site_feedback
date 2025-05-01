@@ -9,21 +9,43 @@
     <link rel="stylesheet" href="../static/style/cores.css">
     <link rel="stylesheet" href="../static/style/media.css">
 
-    <script src="https://kit.fontawesome.com/012551d750.js" crossorigin="anonymous" defer></script>
+    <script src="../static/js/global.js" defer></script>
     
     <title>Feedback</title>
 </head>
 <body>
 
+
+    <header>
+            
+        <div class="container_menu">
+
+            <button id="button_menu"> <img src="../static/icons/menu_black.svg" alt="menu"> </button>
+
+        </div>
+
+
+        <div class="container_options">
+
+            <button id="button_flex">Flex</button>
+            <button id="button_block">Block</button>
+            <button id="button_white">Tema CLaro</button>
+            <button id="button_black">Tema Escuro</button>
+            <button id="button_fechar">Fechar</button>
+
+        </div>
+
+    </header>
+
     <main>
 
-        <header>
+        <section class="container_title">
             
             <h1>Super Chat</h1>
     
             <h3>Seja bem-vindo {{session["nome_usuario"]}}</h3>
     
-        </header>
+        </section>
 
         <section class="logoff">
 
@@ -31,9 +53,10 @@
 
                 <figure>
 
-                    <a href="/get/logoff">
+                    <a href="/get/logout">
 
-                        <img src="../static/img/logoff.png" alt="logoff">
+                        <img src="../static/icons/logout_white.png" alt="logout">
+                        
 
                     </a>
 
@@ -43,6 +66,8 @@
 
         </section>
 
+
+
     
         <section class="container">
     
@@ -51,10 +76,9 @@
                 <form class="comentarios" action="/post/mensagem" method="POST">
                     
                     <label>Comentário</label>
-                    <br>
                     <textarea name="mensagem" class="input_mensagem"></textarea>
     
-                    <button>Enviar</button>
+                    <button id="button_enviar">Enviar</button>
     
                     <img src="../static/img/{{gif_html}}" alt="gif" class="gif_aleatorio">
     
@@ -144,13 +168,14 @@
     
         <span class="aviso">
             
-            <marquee>
+            <marquee id="texto_aviso">
                 
-                <i class="fa-sharp fa-solid fa-circle-radiation fa-fade" style="color: #FFD43B;"> 
+                <img src="../static/icons/radiation.png" alt="radiation" class="icon_marquee">
+                
+                Aviso, se um comentario for ter mais de 1000 caracteres, este comentário não será enviado
+                <img src="../static/img/{{gif_marquee_html}}" alt="img" class="img_marquee"> 
 
-                </i> Aviso, se um comentario for ter mais de 1000 caracteres, este comentário não será enviado<img src="../static/img/{{gif_marquee_html}}" alt="img" class="img_marquee"> 
-
-                <i class="fa-sharp fa-solid fa-circle-radiation fa-fade" style="color: #FFD43B;"></i>
+                <img src="../static/icons/radiation.png" alt="radiation" class="icon_marquee">
             
             </marquee>
             

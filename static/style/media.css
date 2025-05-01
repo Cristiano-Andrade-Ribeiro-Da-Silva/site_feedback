@@ -1,5 +1,5 @@
 /* Celular */
-@media (max-width: 900px)
+@media (max-width: 760px)
 {
     main
     {
@@ -18,12 +18,18 @@
         width: 90%;
         height: 550px;
     }
+
+    .comentarios
+    {
+        height: 200px;
+    }
        
     
     .input_mensagem
     {
         min-height: 20%;
-        max-height: 60%;
+        height: 40%;
+        max-height: 50%;
     }
 
 
@@ -122,12 +128,12 @@
 
 
 /* Notbook */
-@media (min-width: 900px) and (max-width: 1380px)
+@media (min-width: 760px) and (max-width: 1380px)
 {
     main
     {
         width: 90vw;
-        height: 90vh;
+        height: auto;
 
         margin: 30px auto;
 
@@ -144,6 +150,8 @@
     {
         height: 300px;
     }
+
+
         
     .input_mensagem
     {
@@ -175,5 +183,11 @@
     .mensagem_chat
     {
         width: 90%;
+    }
+
+    .img_marquee
+    {
+        width: 60px;
+        height: 40px;
     }
 }

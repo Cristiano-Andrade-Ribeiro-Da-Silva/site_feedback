@@ -68,11 +68,11 @@ def post_logar():
 
 
 # Rota para deslogar do site
-@app.route("/get/logoff")
+@app.route("/get/logout")
 def pos_logoff():
 
     # Função de des-logar
-    Usuario.logoff()
+    Usuario.logout()
 
     return redirect("/")
 
