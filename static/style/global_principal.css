@@ -49,20 +49,6 @@ header  button
 }
 
 
-.container_options
-{
-    width: 40%;
-    height: auto;
-
-    margin: 10px;
-    gap: 10px;
-
-    display: none;
-    flex-direction: row;
-    align-items: start;
-}
-
-
 main
 {
     width: 1400px;
